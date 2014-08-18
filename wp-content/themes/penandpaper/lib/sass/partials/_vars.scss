@@ -1,0 +1,75 @@
+// GLOBAL VARIABLES - include your variables here or alter the predefined vars
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+$alert-yellow:      #ebe16f;
+$alert-red:         #fbe3e4;
+$alert-green:       #e6efc2;
+$alert-blue:        #d5edf8;
+$black:             #323944;
+$white:             #fff;
+$light-gray:        #f8f9fa;
+$gray:              #eaedf2;
+$text-color:        #5c6b80;
+$meta-gray:         #9fa6b4;
+$tan:               #eceee5;
+$green:             #7dd667;
+$bones-pink:        #f01d4f;
+$blue:              #2980b9;
+$link-color:        $bones-pink;
+$link-hover:        darken($link-color, 9%);
+$border-color:      #ccc;
+$disabled-gray:     #cfcfcf;
+
+
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+
+// MY VARIABLES
+// Dark Brown: #775E32, Milk Chocolate: #9A7A72, Gray: #D6D6D6, Medium tan: #E2CDAF, Light Tan: #E6DCC8, Creamy Yellow: #FEF3BE, Orangey Tan: #E6C991
+
+$light-tan: #E6DCC8;
+$medium-tan: #E2CDAF;
+// background vars
+$backgroundColor: #fff; // default background information
+$backgroundImage: url(../images/tree.png) fixed no-repeat;
+// font vars
+$fontSize: 16px; // default font size. Change here will adjust sizes across the board.
+$fontFamily: "Dosis", "Helvetica Neue", Helvetica, Arial, sans-serif; // default fonts
+$fontColor: #775E32; // default font color
+
+// form vars
+$formFont: $fontFamily; // default font font
+
+// link vars
+$linkColor: #84A6DC; // default link INERT color
+$linkHoverColor: #FFBE4C; // default link HOVER color
+$linkDecoration: none; // default link decoration
+
+$highlight: #FFBE4C;
+
+// heading vars
+$headingFamily: "Gilda", "Georgia", serif; // default heading font
+$headingColor: #775E32; // default heading color
+
+// grid variables
+$baseWidth: 960px; // change this to alter the overall width of the grid
+$baseWidthMQ:960px; // base width for media query calculations in layout file
+$baseColWidth: 40px; // change this the alter the grid calculation, see _mixins file for more details
+$baseGutterWidth: 40px; // calculation has changed, this is mainly here for consistency with 960.gs
+$isFluid: true; // want a fluid grid by default?
+
+// ------ CHANGE MAY CAUSE UNDESIRED RESULTS
+$baseColCount: 16; // number of cols to generate
+
+// media query dimensions
+$tabletWidth: 768px;
+$mobilePortraitWidth: 300px;
+$mobileLandscapeWidth: 420px;
+

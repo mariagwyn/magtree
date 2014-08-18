@@ -1,0 +1,139 @@
+Notes:
+
+Remove numbers from FAQs
+Remove permalink from FAQs
+
+
+ /* FORMS
+  * ------------------------------------------------ */
+  form { margin-bottom: 20px; }
+  fieldset { margin-bottom: 20px; }
+  textarea,
+  select {
+    &:hover, &:focus {
+      border: 1px solid $linkColor;
+      color: $linkHoverColor;
+      @include box-shadow(0 0 3px rgba(0,0,0,0.2));
+    }
+    &:active {
+      border: 1px solid darken(#aaa, 10%);
+      @include box-shadow(0 0 3px rgba(0,0,0,0.3));
+    }
+  }
+  label,
+  legend {
+    display: block;
+    font: {
+      size: $fontSize + 1;
+      weight: bold;
+    };
+  }
+  select { width: 220px; }
+  }
+
+
+
+
+
+
+
+/*-------=form elements-------*/
+
+input, textarea {
+  width: 100%;
+  background: none;
+  border-bottom: 1px dashed #999;
+  margin-bottom: 50px;
+  float: left;
+  clear: right;
+  -webkit-transition: border-color .2s;
+  -moz-transition: border-color .2s;
+  transition: border-color .2s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input:hover, textarea:hover, input:focus {
+  border-bottom: 1px dashed #525252;
+}
+
+textarea {
+  &:focus {
+    border-bottom: 1px dashed #525252;
+  }
+  height: 235px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  &[type=submit], &[type=button] {
+    color: white;
+    padding: .8em 1.3em;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    display: block;
+    text-align: center;
+    margin: 0 auto 1em auto;
+    float: none;
+    clear: both;
+  }
+}
+
+button, .button {
+  color: white;
+  padding: .8em 1.3em;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  display: block;
+  text-align: center;
+  margin: 0 auto 1em auto;
+  float: none;
+  clear: both;
+}
+
+input {
+  &[type=submit]:hover, &[type=button]:hover {
+    opacity: .8;
+    text-decoration: none;
+  }
+}
+
+button:hover, .button:hover {
+  opacity: .8;
+  text-decoration: none;
+}
+
+input {
+  &[type=image], &[type=radio], &[type=checkbox] {
+    width: auto;
+    border-bottom: none;
+  }
+  &[type=radio], &[type=checkbox] {
+    margin: 6px 5px 10px 0;
+    float: none;
+  }
+}
+
+
+}
+
+a {
+  &.button {
+    display: inline-block;
+    text-shadow: none;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    &:hover {
+      color: white;
+    }
+  }
+}

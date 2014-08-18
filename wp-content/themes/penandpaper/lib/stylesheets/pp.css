@@ -1,0 +1,979 @@
+/*
+Theme Name: Pen & Paper
+Theme URI: http://themeforest.net/user/dabaman/portfolio
+Description: <strong>Pen & Paper</strong> is a responsive single page WordPress theme
+Version: 1.6
+Author: dabaman
+Author URI: http://themeforest.net/user/dabaman/
+Tags: black, white, threaded-comments, translation-ready, custom-menu
+License:
+License URI:
+*/
+/*========================================
+	=RESET
+=========================================*/
+/*========================================
+		=MIXED
+=========================================*/
+/*------=body, =html-------------------*/
+/*------=global colors -----------*/
+/* font colors */
+/* text shadow */
+/*------=global backgrounds-----------*/
+/* 'gray sand' texture */
+/*------=global transitions-----------*/
+/* line 36, ../sass/pp.scss */
+.next_slide {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+/* line 43, ../sass/pp.scss */
+button, .button, #mobile_nav, .navigation li a, .flex-direction-nav a, ul.thumbs li a img, .controls a, #google_map .close, nav.pages a.page-numbers, .feat_img a, .navigation li ul li a {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+/*------=layered paper look-----------*/
+/* line 55, ../sass/pp.scss */
+.styled, .gallery .gallery-item a, img.avatar {
+  padding: 8px;
+}
+
+/*------=section-------------------*/
+/* line 62, ../sass/pp.scss */
+section.slide, section.page {
+  min-height: 100%;
+}
+/* line 65, ../sass/pp.scss */
+section.slide > .container, section.page > .container {
+  padding: 150px 0;
+}
+/* line 68, ../sass/pp.scss */
+section.slide {
+  background-attachment: fixed !important;
+}
+
+/*------=h-------------------*/
+/*------=p-------------------*/
+/*------=a-------------------*/
+/*----------=table-------------------------*/
+/* line 79, ../sass/pp.scss */
+table {
+  text-align: center;
+  width: 100%;
+  border: 1px dashed #ccc;
+  margin-bottom: 2em;
+}
+/* line 84, ../sass/pp.scss */
+table thead tr th, table tfoot td {
+  border: none;
+}
+/* line 87, ../sass/pp.scss */
+table caption {
+  margin-bottom: .5em;
+}
+
+/* line 92, ../sass/pp.scss */
+td {
+  padding: .4em .5em;
+  text-align: center;
+  border-right: 1px dashed #ccc;
+  border-bottom: 1px dashed #ccc;
+}
+
+/* line 99, ../sass/pp.scss */
+th {
+  padding: .4em .5em;
+  text-align: center;
+  border-right: 1px dashed #ccc;
+  border-bottom: 1px dashed #ccc;
+  padding: .5em .6em;
+}
+
+/* line 108, ../sass/pp.scss */
+tr:last-child td, tr:last-child th {
+  border-bottom: none;
+}
+
+/* line 113, ../sass/pp.scss */
+td:last-child, th:last-child {
+  border-right: none;
+}
+
+/*----------=code-------------------------*/
+/* line 119, ../sass/pp.scss */
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/*------=ul, =ol, =dl-------------------*/
+/* line 127, ../sass/pp.scss */
+section.slide ul, section.slide ol, section.slide dl {
+  margin-bottom: 1em;
+}
+/* line 132, ../sass/pp.scss */
+section.page ul, section.page ol, section.page dl {
+  margin-bottom: 1em;
+}
+
+/* line 139, ../sass/pp.scss */
+ul.filter a, ul.curly_brackets {
+  font-size: 1.05em;
+}
+
+/* line 144, ../sass/pp.scss */
+a ul.tabs a {
+  font-size: 1.05em;
+}
+
+/* line 148, ../sass/pp.scss */
+.container {
+  position: relative;
+  clear: both;
+}
+/* line 149, ../sass/pp.scss */
+.container ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+/*------=div-------------------*/
+/* line 159, ../sass/pp.scss */
+.fixed_pos {
+  position: fixed;
+}
+
+/* line 163, ../sass/pp.scss */
+.separator {
+  height: 2px;
+  box-shadow: 1px 1px 1px white;
+  clear: both;
+  width: 50px;
+  margin: 0 auto 50px auto;
+}
+
+/* line 171, ../sass/pp.scss */
+#blog_content .separator {
+  margin-bottom: 35px;
+}
+
+/* line 175, ../sass/pp.scss */
+.space {
+  clear: both;
+  height: 80px;
+}
+
+/*------=img, =figure-------------------*/
+/* line 182, ../sass/pp.scss */
+img {
+  /* make img fluid */
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+}
+
+/* line 190, ../sass/pp.scss */
+figure img {
+  display: block;
+}
+
+/* line 194, ../sass/pp.scss */
+figcaption {
+  text-align: center;
+  margin: .5em 0;
+}
+
+/* line 199, ../sass/pp.scss */
+img.alignleft, figure.alignleft {
+  margin-right: 1em;
+}
+
+/* line 203, ../sass/pp.scss */
+img.alignright, figure.alignright {
+  margin-left: 1em;
+}
+
+/*----- =blockquote -----------*/
+/* line 209, ../sass/pp.scss */
+blockquote {
+  text-align: center;
+  position: relative;
+  padding: 0 3em 0 3em;
+  margin: 0 0 1em 0;
+}
+/* line 214, ../sass/pp.scss */
+blockquote:before, blockquote:after {
+  font-size: 5em;
+  color: #ccc;
+  opacity: .5;
+  position: absolute;
+  font-style: normal;
+  top: -30px;
+}
+/* line 222, ../sass/pp.scss */
+blockquote:before {
+  content: '\201C';
+  left: 0;
+}
+/* line 226, ../sass/pp.scss */
+blockquote:after {
+  content: '\201D';
+  right: 0;
+}
+
+/* adding quotation marks before and after blockquote */
+/*------=selection color ------*/
+/* line 237, ../sass/pp.scss */
+*::-moz-selection, *::selection {
+  background: #3d3d3d;
+  color: white;
+}
+
+/* line 243, ../sass/pp.scss */
+mark {
+  background: #3d3d3d;
+  color: white;
+}
+
+/*========================================
+		=HEADER
+=========================================*/
+/* line 252, ../sass/pp.scss */
+body > header {
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* line 259, ../sass/pp.scss */
+header .container {
+  padding: 0;
+}
+
+/* line 263, ../sass/pp.scss */
+#logo_img {
+  max-height: 55px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+}
+
+/*========================================
+		=FLEXSLIDER
+=========================================*/
+/* line 275, ../sass/pp.scss */
+.flexslider {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  clear: both;
+  margin: 8px 0 70px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 285, ../sass/pp.scss */
+.flexslider ul.slides {
+  zoom: 1;
+  margin-bottom: 0;
+}
+/* line 289, ../sass/pp.scss */
+.flexslider .slides li {
+  display: block;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 299, ../sass/pp.scss */
+ul.flex-direction-nav {
+  margin-bottom: 0 !important;
+}
+
+/* line 303, ../sass/pp.scss */
+.flex-direction-nav a {
+  display: none;
+  position: absolute;
+  top: 50%;
+  margin-top: -23px;
+  width: 46px;
+  text-align: center;
+  height: 46px;
+  line-height: 46px;
+  color: white;
+  text-shadow: none;
+  opacity: 0;
+  font-size: .9em;
+}
+/* line 316, ../sass/pp.scss */
+.flex-direction-nav a i {
+  height: 46px;
+}
+
+/* line 322, ../sass/pp.scss */
+.flexslider:hover .flex-direction-nav a {
+  display: block;
+  opacity: 1;
+}
+/* line 326, ../sass/pp.scss */
+.flexslider .flex-direction-nav a:hover {
+  text-decoration: none;
+  opacity: .8;
+}
+
+/* line 333, ../sass/pp.scss */
+.flex-direction-nav .flex-next {
+  right: -46px;
+  box-shadow: inset 3px 0 3px #2d2d2d;
+}
+/* line 337, ../sass/pp.scss */
+.flex-direction-nav .flex-prev {
+  left: -46px;
+  box-shadow: inset -3px 0 3px #2d2d2d;
+}
+
+/* line 343, ../sass/pp.scss */
+.flex-control-nav {
+  position: absolute;
+  bottom: -70px;
+  height: 30px;
+  padding: 0;
+  z-index: 1000;
+  float: left;
+  display: block;
+  left: 50%;
+}
+/* line 352, ../sass/pp.scss */
+.flex-control-nav li {
+  position: relative;
+  float: left;
+  display: block;
+  right: 50%;
+  padding: 0;
+}
+/* line 358, ../sass/pp.scss */
+.flex-control-nav li a {
+  text-indent: -9999px;
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 1px dashed #999;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  margin: 0 8px;
+  cursor: pointer;
+}
+/* line 370, ../sass/pp.scss */
+.flex-control-nav li a.flex-active {
+  background: #ccc;
+  box-shadow: inset 0 2px 2px #888;
+  border: 1px white solid;
+}
+
+/* line 379, ../sass/pp.scss */
+.flex-caption {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+/* line 388, ../sass/pp.scss */
+.flexslider .slides > li {
+  display: none;
+}
+/* line 391, ../sass/pp.scss */
+.flexslider .slides img {
+  display: block;
+  margin: 0;
+  float: left;
+}
+
+/*========================================
+		=PORTFOLIO
+=========================================*/
+/*-------=filter list-------------------*/
+/* line 405, ../sass/pp.scss */
+ul.filter {
+  text-align: center;
+  position: relative;
+  clear: both;
+}
+/* line 409, ../sass/pp.scss */
+ul.filter li {
+  display: inline;
+  margin: 0 .5em;
+}
+/* line 414, ../sass/pp.scss */
+ul.curly_brackets li {
+  display: inline;
+  margin: 0 .5em;
+}
+/* line 418, ../sass/pp.scss */
+ul.filter li.active a {
+  text-decoration: underline;
+}
+/* line 421, ../sass/pp.scss */
+ul.thumbs li {
+  margin-bottom: 30px;
+  display: block;
+}
+/* line 424, ../sass/pp.scss */
+ul.thumbs li a {
+  margin: 0;
+  display: block;
+  text-align: center;
+}
+/* line 428, ../sass/pp.scss */
+ul.thumbs li a img {
+  margin: 0 auto;
+  display: block;
+}
+/* line 431, ../sass/pp.scss */
+ul.thumbs li a img:hover {
+  opacity: .8;
+}
+/* line 436, ../sass/pp.scss */
+ul.thumbs li .caption {
+  display: none;
+}
+
+/*-------=thumbs list-------------------*/
+/*-------=slideshow (Galleriffic plugin)-------------------*/
+/* line 446, ../sass/pp.scss */
+.slideshow_container {
+  position: relative;
+  margin-bottom: 30px !important;
+}
+
+/* line 451, ../sass/pp.scss */
+.slideshow {
+  height: 570px;
+  /* equal to the height of the full size image (570px) */
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 460, ../sass/pp.scss */
+.loading {
+  background: url(lib/images/loading.gif) no-repeat center center;
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 50%;
+  top: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  z-index: 100;
+}
+
+/* line 472, ../sass/pp.scss */
+.contols_container {
+  position: relative;
+  min-height: 40px;
+}
+
+/* line 477, ../sass/pp.scss */
+.caption {
+  position: absolute;
+  left: -3px;
+  margin: 0;
+  bottom: 8px;
+  z-index: 100;
+}
+/* line 483, ../sass/pp.scss */
+.caption h3, .caption p {
+  display: block;
+  float: left;
+  width: auto;
+  clear: both;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+/* line 493, ../sass/pp.scss */
+.controls {
+  position: absolute;
+  right: 24px;
+  bottom: 0;
+  float: right;
+  padding: 0;
+}
+/* line 499, ../sass/pp.scss */
+.controls > div {
+  float: right;
+}
+/* line 502, ../sass/pp.scss */
+.controls a {
+  float: left;
+  color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-left: 1px;
+  font-style: normal;
+  font-size: .7em;
+  box-shadow: inset 0 -3px 3px #2d2d2d;
+  text-shadow: none;
+}
+/* line 515, ../sass/pp.scss */
+.controls .close {
+  float: right;
+  font-size: 0.8em;
+}
+/* line 519, ../sass/pp.scss */
+.controls a:hover {
+  text-decoration: none;
+  opacity: .8;
+}
+
+/* line 525, ../sass/pp.scss */
+.thumbs_container .pagination {
+  clear: both;
+  text-align: center;
+  position: relative;
+}
+/* line 529, ../sass/pp.scss */
+.thumbs_container .pagination * {
+  margin: 0 .5em;
+  font-size: 1.05em;
+}
+/* line 532, ../sass/pp.scss */
+.thumbs_container .pagination *:first-child {
+  margin-left: 46px;
+}
+/* line 535, ../sass/pp.scss */
+.thumbs_container .pagination *:last-child {
+  margin-right: 46px;
+}
+/* line 539, ../sass/pp.scss */
+.thumbs_container .pagination .span {
+  margin-left: 0;
+}
+/* line 542, ../sass/pp.scss */
+.thumbs_container .pagination.top {
+  margin-bottom: 1em;
+}
+
+/*========================================
+		=CONTACT
+=========================================*/
+/*-------=contact form 7 plugin-------------------*/
+/* line 553, ../sass/pp.scss */
+.wpcf7-list-item {
+  float: left;
+  width: 100%;
+}
+
+/* line 559, ../sass/pp.scss */
+.wpcf7-form input[type=text], .wpcf7-form input[type=email] {
+  margin-top: 5px;
+}
+
+/* line 564, ../sass/pp.scss */
+.wpcf7-not-valid-tip, .wpcf7-response-output {
+  text-align: center;
+  border: none !important;
+}
+
+/* line 569, ../sass/pp.scss */
+.wpcf7-not-valid-tip {
+  background: #3d3d3d url(lib/images/gray_sand.png) !important;
+  color: white;
+  padding: 8px 15px !important;
+  border-radius: 20px !important;
+  width: auto !important;
+  float: left;
+  top: -30px !important;
+}
+
+/* line 579, ../sass/pp.scss */
+.wpcf7-form-control-wrap {
+  clear: both;
+  float: left;
+  width: 100%;
+}
+
+/* line 585, ../sass/pp.scss */
+.wpcf7-not-valid-tip:after {
+  /* tooltip arrow */
+  content: ' ';
+  height: 0;
+  position: absolute;
+  width: 0;
+  border: 5px solid transparent;
+  border-top-color: #3d3d3d;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+}
+
+/*------=tooltips---------*/
+/* line 599, ../sass/pp.scss */
+div.tooltip {
+  color: white;
+  font-size: .9em;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+/* line 604, ../sass/pp.scss */
+div.tooltip:after {
+  /* tooltip arrow */
+  content: ' ';
+  height: 0;
+  position: absolute;
+  width: 0;
+  border: 5px solid transparent;
+  border-top-color: #3d3d3d;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+}
+
+/*========================================
+	=BLOG
+=========================================*/
+/* line 623, ../sass/pp.scss */
+article.post {
+  margin-bottom: 120px;
+}
+/* line 626, ../sass/pp.scss */
+article.single_post {
+  float: left;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+/* line 633, ../sass/pp.scss */
+h1 > a, h2 > a {
+  font-style: normal;
+}
+
+/* line 637, ../sass/pp.scss */
+h1 > a:hover, h2:hover > a {
+  text-decoration: none;
+}
+
+/* line 641, ../sass/pp.scss */
+.feat_img {
+  float: left;
+  clear: both;
+  margin: 10px 0 30px 0;
+}
+/* line 645, ../sass/pp.scss */
+.feat_img a {
+  display: block;
+}
+/* line 648, ../sass/pp.scss */
+.feat_img img {
+  display: block;
+  width: 100%;
+}
+
+/* line 654, ../sass/pp.scss */
+.gallery-icon img {
+  width: 100%;
+}
+
+/* line 658, ../sass/pp.scss */
+.sticky {
+  /* special styling for sticky posts */
+}
+
+/* line 662, ../sass/pp.scss */
+.bypostauthor {
+  /* special styling for autors posts */
+}
+
+/*------=navigation---------*/
+/*------=comments---------*/
+/* line 671, ../sass/pp.scss */
+#comments {
+  margin-top: 4em;
+  float: left;
+  width: 100%;
+}
+/* line 675, ../sass/pp.scss */
+#comments h2 {
+  text-align: center;
+  font-size: 2.2em;
+}
+
+/* line 681, ../sass/pp.scss */
+#reply-title {
+  text-align: center;
+  font-size: 2.2em;
+}
+
+/* line 686, ../sass/pp.scss */
+section.page .commentlist {
+  margin-bottom: 4em;
+}
+
+/* line 691, ../sass/pp.scss */
+.commentlist #reply-title {
+  font-size: 1.8em;
+}
+/* line 694, ../sass/pp.scss */
+.commentlist li {
+  margin-bottom: 4em;
+}
+/* line 696, ../sass/pp.scss */
+.commentlist li:last-child {
+  margin-bottom: 0;
+}
+
+/* line 702, ../sass/pp.scss */
+.logged-in-as {
+  text-align: center;
+}
+
+/* line 706, ../sass/pp.scss */
+.comment-author h3 {
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+/* line 711, ../sass/pp.scss */
+.commentmetadata {
+  color: #a09f9d;
+  margin-bottom: 1em;
+}
+
+/* line 716, ../sass/pp.scss */
+.comment-reply-link {
+  float: right;
+}
+
+/* line 720, ../sass/pp.scss */
+#cancel-comment-reply-link {
+  float: right;
+  margin-left: -0.8em;
+}
+/* line 723, ../sass/pp.scss */
+#cancel-comment-reply-link i {
+  font-size: .7em;
+}
+
+/* line 728, ../sass/pp.scss */
+#comment-reply-link i {
+  font-size: 1.1em;
+}
+
+/* line 732, ../sass/pp.scss */
+.comment_text, .commentlist #respond {
+  margin-left: 98px;
+}
+
+/* line 736, ../sass/pp.scss */
+#comments > #respond {
+  margin-bottom: 50px;
+}
+
+/* line 741, ../sass/pp.scss */
+.commentlist #respond {
+  margin-top: 2em;
+}
+/* line 744, ../sass/pp.scss */
+.commentlist .children {
+  margin: 3em 0 0 20px;
+}
+
+/* line 750, ../sass/pp.scss */
+#respond textarea {
+  height: 190px;
+}
+/* line 753, ../sass/pp.scss */
+#respond input[type=text] {
+  margin-bottom: 25px;
+}
+
+/* line 758, ../sass/pp.scss */
+.commentlist #respond textarea {
+  margin-bottom: 25px;
+}
+
+/* line 762, ../sass/pp.scss */
+#respond .required {
+  margin-left: 5px;
+}
+
+/*------=avatar---------*/
+/* line 768, ../sass/pp.scss */
+img.avatar {
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 773, ../sass/pp.scss */
+.comment-author h3 > a {
+  font-style: inherit;
+}
+
+/*------=tags---------*/
+/* line 779, ../sass/pp.scss */
+.post_tags, .link_pages {
+  margin: 2em 0 2em 0;
+}
+
+/* line 784, ../sass/pp.scss */
+.post_tags i {
+  margin-right: 5px;
+}
+/* line 787, ../sass/pp.scss */
+.post_tags a {
+  margin-left: 5px;
+}
+
+/*------=pages list---------*/
+/* line 794, ../sass/pp.scss */
+.pages {
+  width: 100%;
+}
+
+/* line 799, ../sass/pp.scss */
+section nav.pages ul, section ul.pages {
+  text-align: center;
+}
+
+/* line 804, ../sass/pp.scss */
+.pages li {
+  display: inline;
+}
+
+/* line 810, ../sass/pp.scss */
+nav.pages ul li a, nav.pages ul li span {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  line-height: 40px;
+  font-style: normal;
+}
+/* line 818, ../sass/pp.scss */
+nav.pages li a i {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  line-height: 40px;
+  font-style: normal;
+}
+/* line 825, ../sass/pp.scss */
+nav.pages ul li a:hover {
+  text-decoration: none;
+}
+/* line 828, ../sass/pp.scss */
+nav.pages li a {
+  color: white;
+  text-shadow: none;
+}
+/* line 831, ../sass/pp.scss */
+nav.pages li a i {
+  color: white;
+  text-shadow: none;
+  font-size: 0.85em;
+}
+/* line 837, ../sass/pp.scss */
+nav.pages a.page-numbers:hover {
+  opacity: .8;
+}
+
+/* line 842, ../sass/pp.scss */
+.feat_img a:hover {
+  opacity: .8;
+}
+
+/* line 846, ../sass/pp.scss */
+.prev_post {
+  margin-right: 20px;
+}
+
+/* line 850, ../sass/pp.scss */
+.next_post {
+  margin-left: 20px;
+}
+
+/* line 854, ../sass/pp.scss */
+.link_pages * {
+  margin: 0 20px;
+}
+
+/*------=searh and search form---------*/
+/* line 860, ../sass/pp.scss */
+article.search_results {
+  margin-bottom: 60px;
+}
+/* line 862, ../sass/pp.scss */
+article.search_results h2 > a {
+  font-size: 1.6em;
+}
+
+/* line 867, ../sass/pp.scss */
+#searchform {
+  position: relative;
+}
+/* line 869, ../sass/pp.scss */
+#searchform input[type=text] {
+  margin-bottom: 30px;
+  padding-right: 25px;
+}
+
+/* line 875, ../sass/pp.scss */
+.magn_glass {
+  position: absolute;
+  top: -8px;
+  right: 0;
+}
+/* line 879, ../sass/pp.scss */
+.magn_glass i {
+  font-size: 1.1em;
+}
+
+/*------=widgets for sidebar---------*/
+/* line 886, ../sass/pp.scss */
+#sidebar .widget {
+  margin-bottom: 30px;
+  float: left;
+  width: 100%;
+}
+
+/*------=celendar widget---------*/
+/* line 895, ../sass/pp.scss */
+#wp-calendar tbody tr:last-child td {
+  border-bottom: 1px dashed #ccc;
+}
+/* line 898, ../sass/pp.scss */
+#wp-calendar tbody tr:first-child td {
+  border-top: 1px dashed #ccc;
+}
+
+/*-------=gallery classes---------------------*/
+/* line 906, ../sass/pp.scss */
+.gallery .gallery-item a {
+  display: inline-block;
+}
+/* line 909, ../sass/pp.scss */
+.gallery .gallery-icon img {
+  display: block;
+  border: none !important;
+}
+/* line 913, ../sass/pp.scss */
+.gallery .gallery-caption {
+  margin-top: 0;
+}

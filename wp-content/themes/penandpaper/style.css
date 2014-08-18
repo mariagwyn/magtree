@@ -1,0 +1,24 @@
+/*
+Theme Name: Pen & Paper
+Theme URI: http://themeforest.net/user/dabaman/portfolio
+Description: <strong>Pen & Paper</strong> is a responsive single page WordPress theme
+Version: 1.6
+Author: dabaman
+Author URI: http://themeforest.net/user/dabaman/
+Tags: black, white, threaded-comments, translation-ready, custom-menu
+License:
+License URI:
+*/
+
+/*
+WordPress Probz
+So Theme Check (http://wordpress.org/plugins/theme-check/)
+is constantly telling me that it needs these classes in the CSS even
+though they are in the REAL stylesheet in library/stylesheets/style.stylesheets.
+So we're gonna drop these here to keep it happy.
+Great work, Theme Check (eye roll)
+*/
+
+.sticky {}          /* DO NOT EDIT THIS */
+.gallery-caption {} /* THESE ARE USELESS */
+.bypostauthor {}    /* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */
