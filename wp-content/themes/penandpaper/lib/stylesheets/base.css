@@ -1654,7 +1654,7 @@ body > table, .styled, .gallery .gallery-item a, img.avatar {
 }
 /* line 334, ../sass/base.scss */
 .curly_brackets span {
-  padding: 5px 50px 5px 50px;
+  padding: 5px 30px 5px 30px;
   line-height: 35px;
   text-align: center;
   position: relative;
@@ -1675,12 +1675,12 @@ ul.curly_brackets li {
 }
 /* line 352, ../sass/base.scss */
 ul.curly_brackets li:first-child {
-  padding-left: 50px;
+  padding-left: 30px;
   margin-left: 0;
 }
 /* line 356, ../sass/base.scss */
 ul.curly_brackets li:last-child {
-  padding-right: 50px;
+  padding-right: 30px;
   margin-right: 0;
 }
 
@@ -1773,26 +1773,26 @@ nav {
   bottom: 0;
 }
 
-/*-------=google map-------------------*/
-/* line 418, ../sass/base.scss */
+/* line 419, ../sass/base.scss */
+section#contact
 #google_map {
   position: relative;
   margin-top: -20px;
 }
 
-/* line 423, ../sass/base.scss */
+/* line 424, ../sass/base.scss */
 #map_canvas_container {
   margin-bottom: 50px;
 }
 
-/* line 427, ../sass/base.scss */
+/* line 428, ../sass/base.scss */
 #map_canvas {
   /* <div> for google maps */
   height: 400px;
   clear: both;
 }
 
-/* line 433, ../sass/base.scss */
+/* line 434, ../sass/base.scss */
 #google_map .close {
   position: relative;
   right: 8px;
@@ -1804,19 +1804,22 @@ nav {
   line-height: 40px;
   text-align: center;
   clear: both;
-  color: white;
   float: right;
-  box-shadow: inset 0 -3px 3px #2d2d2d;
 }
-/* line 447, ../sass/base.scss */
+/* line 446, ../sass/base.scss */
 #google_map .close:hover {
   text-decoration: none;
   opacity: .8;
 }
 
-/* line 453, ../sass/base.scss */
+/* line 452, ../sass/base.scss */
 #map_canvas img {
   max-width: none !important;
+}
+
+/* line 456, ../sass/base.scss */
+a#scroll-to-top {
+  background: url(../images/arrow.png) no-repeat;
 }
 
 /*------=tooltips---------*/
