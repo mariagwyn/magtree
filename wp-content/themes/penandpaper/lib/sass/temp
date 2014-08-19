@@ -137,3 +137,57 @@ a {
     }
   }
 }
+
+
+
+
+@media only screen and (min-width: 768px) {
+  /* always display navigation menu on large resolutions */
+  .navigation {
+    display: block !important;
+    li {
+      ul {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        padding: 0;
+        left: 0;
+        ul {
+          top: 0;
+          left: 100%;
+          margin-left: -10px;
+        }
+      }
+      &:hover > ul {
+        display: block;
+      }
+      ul li {
+        width: 100%;
+        clear: both;
+        float: left;
+        text-align: center;
+        position: relative;
+        a {
+          border-bottom: 1px solid $linkHoverColor;
+          margin: 0;
+          font-size: 1em;
+          display: block;
+          padding: .3em 1em;
+          min-width: 140px;
+        }
+        &:last-child > a {
+          border-bottom: none;
+        }
+        a:hover, &.current_page_item a {
+          background: $linkColor;
+        }
+      }
+    }
+    > li > ul {
+      margin-top: -10px;
+      margin-left: -70px;
+      left: 50%;
+    }
+  }
+  /*-------=dropdown menu-------------------*/
+}

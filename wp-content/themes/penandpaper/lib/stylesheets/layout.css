@@ -123,36 +123,13 @@ body > footer .container {
 /* MEDIA QUERIES
  * ------------------------------------------------ */
 /* Otherwise known as custom responsive code! Write it here! */
-@media only screen and (min-width: 960px) and (max-width: 1280px) {
-  /* add code here */
-}
-/* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {
-  /*-------=portfolio slideshow-------------------*/
-  /* full size image height on this resolution is scalled down to 456px */
-  /* line 101, ../sass/layout.scss */
-  .slideshow {
-    height: 456px;
-  }
-
-  /* line 104, ../sass/layout.scss */
-  .container ul.thumbs .one-third {
-    margin-bottom: 20px;
-  }
-
-  /* line 107, ../sass/layout.scss */
-  .controls {
-    right: 20px;
-  }
-}
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 960px) {
   /* always display navigation menu on large resolutions */
-  /* line 115, ../sass/layout.scss */
+  /* line 95, ../sass/layout.scss */
   .navigation {
     display: block !important;
   }
-  /* line 118, ../sass/layout.scss */
+  /* line 98, ../sass/layout.scss */
   .navigation li ul {
     display: none;
     position: absolute;
@@ -160,17 +137,17 @@ body > footer .container {
     padding: 0;
     left: 0;
   }
-  /* line 124, ../sass/layout.scss */
+  /* line 104, ../sass/layout.scss */
   .navigation li ul ul {
     top: 0;
     left: 100%;
     margin-left: -10px;
   }
-  /* line 130, ../sass/layout.scss */
+  /* line 110, ../sass/layout.scss */
   .navigation li:hover > ul {
     display: block;
   }
-  /* line 133, ../sass/layout.scss */
+  /* line 113, ../sass/layout.scss */
   .navigation li ul li {
     width: 100%;
     clear: both;
@@ -178,7 +155,7 @@ body > footer .container {
     text-align: center;
     position: relative;
   }
-  /* line 139, ../sass/layout.scss */
+  /* line 119, ../sass/layout.scss */
   .navigation li ul li a {
     border-bottom: 1px solid #ffbe4c;
     margin: 0;
@@ -187,15 +164,91 @@ body > footer .container {
     padding: .3em 1em;
     min-width: 140px;
   }
-  /* line 147, ../sass/layout.scss */
+  /* line 127, ../sass/layout.scss */
   .navigation li ul li:last-child > a {
     border-bottom: none;
   }
-  /* line 150, ../sass/layout.scss */
+  /* line 130, ../sass/layout.scss */
   .navigation li ul li a:hover, .navigation li ul li.current_page_item a {
     background: #84a6dc;
   }
-  /* line 155, ../sass/layout.scss */
+  /* line 135, ../sass/layout.scss */
+  .navigation > li > ul {
+    margin-top: -10px;
+    margin-left: -70px;
+    left: 50%;
+  }
+}
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+  /*-------=portfolio slideshow-------------------*/
+  /* full size image height on this resolution is scalled down to 456px */
+  /* line 147, ../sass/layout.scss */
+  .slideshow {
+    height: 456px;
+  }
+
+  /* line 150, ../sass/layout.scss */
+  .container ul.thumbs .one-third {
+    margin-bottom: 20px;
+  }
+
+  /* line 153, ../sass/layout.scss */
+  .controls {
+    right: 20px;
+  }
+}
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* always display navigation menu on large resolutions */
+  /* line 161, ../sass/layout.scss */
+  .navigation {
+    display: block !important;
+  }
+  /* line 164, ../sass/layout.scss */
+  .navigation li ul {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding: 0;
+    left: 0;
+  }
+  /* line 170, ../sass/layout.scss */
+  .navigation li ul ul {
+    top: 0;
+    left: 100%;
+    margin-left: -10px;
+  }
+  /* line 176, ../sass/layout.scss */
+  .navigation li:hover > ul {
+    display: block;
+  }
+  /* line 179, ../sass/layout.scss */
+  .navigation li ul li {
+    width: 100%;
+    clear: both;
+    float: left;
+    text-align: center;
+    position: relative;
+  }
+  /* line 185, ../sass/layout.scss */
+  .navigation li ul li a {
+    border-bottom: 1px solid #ffbe4c;
+    margin: 0;
+    font-size: 1em;
+    display: block;
+    padding: .3em 1em;
+    min-width: 140px;
+  }
+  /* line 193, ../sass/layout.scss */
+  .navigation li ul li:last-child > a {
+    border-bottom: none;
+  }
+  /* line 196, ../sass/layout.scss */
+  .navigation li ul li a:hover, .navigation li ul li.current_page_item a {
+    background: #84a6dc;
+  }
+  /* line 201, ../sass/layout.scss */
   .navigation > li > ul {
     margin-top: -10px;
     margin-left: -70px;
@@ -204,55 +257,55 @@ body > footer .container {
 }
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
-  /* line 165, ../sass/layout.scss */
+  /* line 211, ../sass/layout.scss */
   body {
     background: white none;
   }
 
-  /* line 168, ../sass/layout.scss */
+  /* line 214, ../sass/layout.scss */
   h1 {
     font-size: 1.6em;
   }
 
-  /* line 172, ../sass/layout.scss */
+  /* line 218, ../sass/layout.scss */
   section.slide > .container, section.page > .container {
     padding: 60px 0;
   }
 
   /*-------=portfolio slideshow-------------------*/
   /* full size image height on this resolution is scalled down to 255px */
-  /* line 178, ../sass/layout.scss */
+  /* line 224, ../sass/layout.scss */
   .slideshow {
     height: 255px;
   }
 
-  /* line 181, ../sass/layout.scss */
+  /* line 227, ../sass/layout.scss */
   .controls {
     right: 5px;
   }
 
-  /* line 184, ../sass/layout.scss */
+  /* line 230, ../sass/layout.scss */
   .slideshow_container {
     margin-bottom: 20px !important;
   }
 
-  /* line 187, ../sass/layout.scss */
+  /* line 233, ../sass/layout.scss */
   .container ul.thumbs .one-third {
     width: 133px;
     margin: 0 0 10px 10px;
   }
 
-  /* line 191, ../sass/layout.scss */
+  /* line 237, ../sass/layout.scss */
   .styled, .gallery .gallery-item a {
     padding: 5px;
   }
 
-  /* line 194, ../sass/layout.scss */
+  /* line 240, ../sass/layout.scss */
   .container ul.thumbs .one-third:nth-child(3n+1) {
     margin-left: 0;
   }
 
-  /* line 197, ../sass/layout.scss */
+  /* line 243, ../sass/layout.scss */
   .caption {
     position: relative;
     text-shadow: none;
@@ -260,7 +313,7 @@ body > footer .container {
     bottom: 0;
     margin-top: 10px;
   }
-  /* line 203, ../sass/layout.scss */
+  /* line 249, ../sass/layout.scss */
   .caption h3, .caption p {
     background: none;
     padding: 0;
@@ -268,18 +321,18 @@ body > footer .container {
   }
 
   /*-------=footer/header-------------------*/
-  /* line 210, ../sass/layout.scss */
+  /* line 256, ../sass/layout.scss */
   body > header {
     position: relative;
   }
 
-  /* line 213, ../sass/layout.scss */
+  /* line 259, ../sass/layout.scss */
   body > footer {
     height: 70px;
     margin-top: -125px;
   }
 
-  /* line 217, ../sass/layout.scss */
+  /* line 263, ../sass/layout.scss */
   #social_icons, #copyright_info {
     text-align: center;
     float: none;
@@ -287,36 +340,36 @@ body > footer .container {
     font-size: .8em;
   }
 
-  /* line 223, ../sass/layout.scss */
+  /* line 269, ../sass/layout.scss */
   #social_icons li:first-child {
     margin-left: 0;
   }
 
-  /* line 226, ../sass/layout.scss */
+  /* line 272, ../sass/layout.scss */
   header #header-box-inner, footer #footer-box-inner {
     background: url(../images/white_75_bg.png);
   }
 
   /*-------=flexslider-------------------*/
-  /* line 230, ../sass/layout.scss */
+  /* line 276, ../sass/layout.scss */
   .flex-direction-nav {
     display: none;
   }
 
-  /* line 233, ../sass/layout.scss */
+  /* line 279, ../sass/layout.scss */
   .flex-caption {
     padding: 5px;
   }
 
   /*-------=logo image-------------------*/
-  /* line 237, ../sass/layout.scss */
+  /* line 283, ../sass/layout.scss */
   #logo_img {
     position: relative;
     margin: 8px 0;
   }
 
   /*-------=mobile navigation-------------------*/
-  /* line 242, ../sass/layout.scss */
+  /* line 288, ../sass/layout.scss */
   #mobile_nav {
     display: block;
     position: absolute;
@@ -325,12 +378,12 @@ body > footer .container {
     margin-bottom: 0;
     font-size: 1.45em;
   }
-  /* line 249, ../sass/layout.scss */
+  /* line 295, ../sass/layout.scss */
   #mobile_nav:hover {
     text-decoration: none;
   }
 
-  /* line 253, ../sass/layout.scss */
+  /* line 299, ../sass/layout.scss */
   ul.navigation {
     clear: both;
     z-index: 10000;
@@ -341,18 +394,18 @@ body > footer .container {
     float: left;
   }
 
-  /* line 262, ../sass/layout.scss */
+  /* line 308, ../sass/layout.scss */
   .navigation li {
     text-align: left;
     margin: 0;
     display: block;
     width: 100%;
   }
-  /* line 267, ../sass/layout.scss */
+  /* line 313, ../sass/layout.scss */
   .navigation li ul {
     padding: 0;
   }
-  /* line 270, ../sass/layout.scss */
+  /* line 316, ../sass/layout.scss */
   .navigation li a {
     clear: both;
     margin: 0 15px 0 0;
@@ -360,11 +413,11 @@ body > footer .container {
     width: 100%;
     display: block;
   }
-  /* line 276, ../sass/layout.scss */
+  /* line 322, ../sass/layout.scss */
   .navigation li a:hover {
     background: #84a6dc;
   }
-  /* line 286, ../sass/layout.scss */
+  /* line 332, ../sass/layout.scss */
   .navigation li:last-child > a {
     border-bottom: none;
   }
@@ -377,26 +430,26 @@ body > footer .container {
 @media only screen and (max-width: 479px) {
   /*-------=portfolio slideshow-------------------*/
   /* full size image height on this resolution is scalled down to 180px */
-  /* line 301, ../sass/layout.scss */
+  /* line 347, ../sass/layout.scss */
   .slideshow {
     height: 180px;
   }
 
-  /* line 304, ../sass/layout.scss */
+  /* line 350, ../sass/layout.scss */
   .caption {
     padding-left: 0;
   }
 
-  /* line 307, ../sass/layout.scss */
+  /* line 353, ../sass/layout.scss */
   .container ul.thumbs .one-third {
     width: 145px;
     margin: 0 0 10px 10px;
   }
-  /* line 310, ../sass/layout.scss */
+  /* line 356, ../sass/layout.scss */
   .container ul.thumbs .one-third:nth-child(3n+1) {
     margin-left: 10px;
   }
-  /* line 313, ../sass/layout.scss */
+  /* line 359, ../sass/layout.scss */
   .container ul.thumbs .one-third:nth-child(2n+1) {
     margin-left: 0;
   }
@@ -421,17 +474,8 @@ body > footer .container {
   }
   */
   /*-------=flexslider -------------------*/
-  /* line 337, ../sass/layout.scss */
+  /* line 383, ../sass/layout.scss */
   .flex-caption {
     display: none;
   }
 }
-/*========================================
-		=MEDIA QUERIES (RESPONSIVE D.)
-=========================================*/
-/* Smaller than standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) {
-  /*-------=dropdown menu-------------------*/
-}
-/* All Mobile Sizes (devices and browser) */
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
