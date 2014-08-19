@@ -71,16 +71,16 @@ function pp_scripts() {
 
         // register and enqueue styles
         wp_register_style('pp_skeleton', PP_THEME_DIR . '/lib/stylesheets/skeleton.css' );
-        wp_register_style('mtm_base', PP_THEME_DIR . '/lib/stylesheets/base.css' );
         wp_register_style('mtm_layout', PP_THEME_DIR . '/lib/stylesheets/layout.css' );
+        wp_register_style('mtm_base', PP_THEME_DIR . '/lib/stylesheets/base.css' );
         wp_register_style('mtm_temp', PP_THEME_DIR . '/lib/stylesheets/pp.css' );
         // Register special font stylesheets
         wp_register_style('pp_font_awesome', PP_THEME_DIR . '/lib/stylesheets/font-awesome.min.css' );
         wp_register_style('pp-icomoon', PP_THEME_DIR . '/lib/stylesheets/icomoon.css' );
 
+        wp_enqueue_style( 'mtm_base' );
         wp_enqueue_style( 'pp_skeleton' );
         wp_enqueue_style( 'mtm_layout' );
-        wp_enqueue_style( 'mtm_base' );
         wp_enqueue_style( 'pp_font_awesome' );
         wp_enqueue_style( 'pp-icomoon' );
         wp_enqueue_style('mtm_temp');

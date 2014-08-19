@@ -62,36 +62,23 @@ body.admin-bar > header {
   top: 32px;
 }
 
-/* MEDIA QUERIES
- * ------------------------------------------------ */
-/* Otherwise known as custom responsive code! Write it here! */
-@media only screen and (min-width: 960px) and (max-width: 1280px) {
-  /* add code here */
+/* line 38, ../sass/layout.scss */
+section.slide, section.page {
+  min-height: 100%;
 }
-/* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {
-  /* add code here */
+/* line 41, ../sass/layout.scss */
+section.slide > .container, section.page > .container {
+  padding: 150px 0;
 }
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  /* add code here */
+/* line 44, ../sass/layout.scss */
+section.slide {
+  background-attachment: fixed !important;
 }
-/* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {
-  /* add code here */
-}
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  /* add code here */
-}
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {
-  /* add code here */
-}
+
 /*========================================
 		=FOOTER
 =========================================*/
-/* line 71, ../sass/layout.scss */
+/* line 53, ../sass/layout.scss */
 body > footer {
   padding: 10px 0;
   height: 60px;
@@ -101,34 +88,350 @@ body > footer {
   bottom: 0px;
 }
 
-/* line 81, ../sass/layout.scss */
+/* line 63, ../sass/layout.scss */
 #copyright_info {
   float: right;
 }
 
 /*------=social icons---------*/
-/* line 87, ../sass/layout.scss */
+/* line 69, ../sass/layout.scss */
 #social_icons {
   float: left;
   padding: 0;
 }
-/* line 90, ../sass/layout.scss */
+/* line 72, ../sass/layout.scss */
 #social_icons li {
   display: inline-block;
   margin: 8px 0 0 12px;
 }
-/* line 93, ../sass/layout.scss */
+/* line 75, ../sass/layout.scss */
 #social_icons li a {
   display: inline-block;
   text-align: center;
   font-size: 1.25em;
 }
-/* line 97, ../sass/layout.scss */
+/* line 79, ../sass/layout.scss */
 #social_icons li a:hover {
   text-decoration: none;
 }
 
-/* line 104, ../sass/layout.scss */
+/* line 85, ../sass/layout.scss */
 body > footer .container {
   padding: 0;
 }
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+  /* add code here */
+}
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+  /*-------=portfolio slideshow-------------------*/
+  /* full size image height on this resolution is scalled down to 456px */
+  /* line 101, ../sass/layout.scss */
+  .slideshow {
+    height: 456px;
+  }
+
+  /* line 104, ../sass/layout.scss */
+  .container ul.thumbs .one-third {
+    margin-bottom: 20px;
+  }
+
+  /* line 107, ../sass/layout.scss */
+  .controls {
+    right: 20px;
+  }
+}
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* always display navigation menu on large resolutions */
+  /* line 115, ../sass/layout.scss */
+  .navigation {
+    display: block !important;
+  }
+  /* line 118, ../sass/layout.scss */
+  .navigation li ul {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding: 0;
+    left: 0;
+  }
+  /* line 124, ../sass/layout.scss */
+  .navigation li ul ul {
+    top: 0;
+    left: 100%;
+    margin-left: -10px;
+  }
+  /* line 130, ../sass/layout.scss */
+  .navigation li:hover > ul {
+    display: block;
+  }
+  /* line 133, ../sass/layout.scss */
+  .navigation li ul li {
+    width: 100%;
+    clear: both;
+    float: left;
+    text-align: center;
+    position: relative;
+  }
+  /* line 139, ../sass/layout.scss */
+  .navigation li ul li a {
+    border-bottom: 1px solid #ffbe4c;
+    margin: 0;
+    font-size: 1em;
+    display: block;
+    padding: .3em 1em;
+    min-width: 140px;
+  }
+  /* line 147, ../sass/layout.scss */
+  .navigation li ul li:last-child > a {
+    border-bottom: none;
+  }
+  /* line 150, ../sass/layout.scss */
+  .navigation li ul li a:hover, .navigation li ul li.current_page_item a {
+    background: #84a6dc;
+  }
+  /* line 155, ../sass/layout.scss */
+  .navigation > li > ul {
+    margin-top: -10px;
+    margin-left: -70px;
+    left: 50%;
+  }
+}
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+  /* line 165, ../sass/layout.scss */
+  body {
+    background: white none;
+  }
+
+  /* line 168, ../sass/layout.scss */
+  h1 {
+    font-size: 1.6em;
+  }
+
+  /* line 172, ../sass/layout.scss */
+  section.slide > .container, section.page > .container {
+    padding: 60px 0;
+  }
+
+  /*-------=portfolio slideshow-------------------*/
+  /* full size image height on this resolution is scalled down to 255px */
+  /* line 178, ../sass/layout.scss */
+  .slideshow {
+    height: 255px;
+  }
+
+  /* line 181, ../sass/layout.scss */
+  .controls {
+    right: 5px;
+  }
+
+  /* line 184, ../sass/layout.scss */
+  .slideshow_container {
+    margin-bottom: 20px !important;
+  }
+
+  /* line 187, ../sass/layout.scss */
+  .container ul.thumbs .one-third {
+    width: 133px;
+    margin: 0 0 10px 10px;
+  }
+
+  /* line 191, ../sass/layout.scss */
+  .styled, .gallery .gallery-item a {
+    padding: 5px;
+  }
+
+  /* line 194, ../sass/layout.scss */
+  .container ul.thumbs .one-third:nth-child(3n+1) {
+    margin-left: 0;
+  }
+
+  /* line 197, ../sass/layout.scss */
+  .caption {
+    position: relative;
+    text-shadow: none;
+    left: 5px;
+    bottom: 0;
+    margin-top: 10px;
+  }
+  /* line 203, ../sass/layout.scss */
+  .caption h3, .caption p {
+    background: none;
+    padding: 0;
+    margin-bottom: default;
+  }
+
+  /*-------=footer/header-------------------*/
+  /* line 210, ../sass/layout.scss */
+  body > header {
+    position: relative;
+  }
+
+  /* line 213, ../sass/layout.scss */
+  body > footer {
+    height: 70px;
+    margin-top: -125px;
+  }
+
+  /* line 217, ../sass/layout.scss */
+  #social_icons, #copyright_info {
+    text-align: center;
+    float: none;
+    margin-bottom: 0;
+    font-size: .8em;
+  }
+
+  /* line 223, ../sass/layout.scss */
+  #social_icons li:first-child {
+    margin-left: 0;
+  }
+
+  /* line 226, ../sass/layout.scss */
+  header #header-box-inner, footer #footer-box-inner {
+    background: url(../images/white_75_bg.png);
+  }
+
+  /*-------=flexslider-------------------*/
+  /* line 230, ../sass/layout.scss */
+  .flex-direction-nav {
+    display: none;
+  }
+
+  /* line 233, ../sass/layout.scss */
+  .flex-caption {
+    padding: 5px;
+  }
+
+  /*-------=logo image-------------------*/
+  /* line 237, ../sass/layout.scss */
+  #logo_img {
+    position: relative;
+    margin: 8px 0;
+  }
+
+  /*-------=mobile navigation-------------------*/
+  /* line 242, ../sass/layout.scss */
+  #mobile_nav {
+    display: block;
+    position: absolute;
+    right: 0;
+    line-height: 100%;
+    margin-bottom: 0;
+    font-size: 1.45em;
+  }
+  /* line 249, ../sass/layout.scss */
+  #mobile_nav:hover {
+    text-decoration: none;
+  }
+
+  /* line 253, ../sass/layout.scss */
+  ul.navigation {
+    clear: both;
+    z-index: 10000;
+    display: none;
+    width: 90%;
+    margin: 0 0 10px 0;
+    background: white;
+    float: left;
+  }
+
+  /* line 262, ../sass/layout.scss */
+  .navigation li {
+    text-align: left;
+    margin: 0;
+    display: block;
+    width: 100%;
+  }
+  /* line 267, ../sass/layout.scss */
+  .navigation li ul {
+    padding: 0;
+  }
+  /* line 270, ../sass/layout.scss */
+  .navigation li a {
+    clear: both;
+    margin: 0 15px 0 0;
+    padding: 5px 0;
+    width: 100%;
+    display: block;
+  }
+  /* line 276, ../sass/layout.scss */
+  .navigation li a:hover {
+    background: #84a6dc;
+  }
+  /* line 286, ../sass/layout.scss */
+  .navigation li:last-child > a {
+    border-bottom: none;
+  }
+}
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* add code here */
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  /*-------=portfolio slideshow-------------------*/
+  /* full size image height on this resolution is scalled down to 180px */
+  /* line 301, ../sass/layout.scss */
+  .slideshow {
+    height: 180px;
+  }
+
+  /* line 304, ../sass/layout.scss */
+  .caption {
+    padding-left: 0;
+  }
+
+  /* line 307, ../sass/layout.scss */
+  .container ul.thumbs .one-third {
+    width: 145px;
+    margin: 0 0 10px 10px;
+  }
+  /* line 310, ../sass/layout.scss */
+  .container ul.thumbs .one-third:nth-child(3n+1) {
+    margin-left: 10px;
+  }
+  /* line 313, ../sass/layout.scss */
+  .container ul.thumbs .one-third:nth-child(2n+1) {
+    margin-left: 0;
+  }
+
+  /*-------=curly brackets style (removed on mobile devices) --------
+  .curly_brackets {
+    span:before, li:first-child:before, span:after, li:last-child:after {
+      content: "";
+    }
+    span {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  ul.curly_brackets li {
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  */
+  /*-------=flexslider -------------------*/
+  /* line 337, ../sass/layout.scss */
+  .flex-caption {
+    display: none;
+  }
+}
+/*========================================
+		=MEDIA QUERIES (RESPONSIVE D.)
+=========================================*/
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) {
+  /*-------=dropdown menu-------------------*/
+}
+/* All Mobile Sizes (devices and browser) */
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */

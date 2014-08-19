@@ -40,13 +40,6 @@ License URI:
   transition: all .3s;
 }
 
-button, .button, #mobile_nav, .navigation li a, .flex-direction-nav a, ul.thumbs li a img, .controls a, #google_map .close, nav.pages a.page-numbers, .feat_img a, .navigation li ul li a {
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
-}
-
 /*------=layered paper look-----------*/
 
 body .styled, table, .gallery .gallery-item a, img.avatar {
@@ -57,18 +50,6 @@ body .styled, table, .gallery .gallery-item a, img.avatar {
 }
 
 /*------=section-------------------*/
-
-section {
-  &.slide, &.page {
-    min-height: 100%;
-  }
-  &.slide > .container, &.page > .container {
-    padding: 150px 0;
-  }
-  &.slide {
-    background-attachment: fixed !important;
-  }
-}
 
 /*------=h-------------------*/
 /*------=p-------------------*/
@@ -248,13 +229,6 @@ mark {
 /*========================================
 		=HEADER
 =========================================*/
-
-body > header {
-  top: 0;
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
-}
 
 header .container {
   padding: 0;
