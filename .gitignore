@@ -1,3 +1,5 @@
 wp-config.php
 .idea/*
 .idea
+wp-content/uploads/*
+wp-content/themes/penandpaper/lib/stylesheets/*.css.map
