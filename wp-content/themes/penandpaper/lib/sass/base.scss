@@ -207,6 +207,10 @@ img.scale-with-grid {
 	max-width: 100%;
 	height: auto;
 }
+.img {
+  border: 2px solid #ffbe4c;
+  @include border-radius(4px);
+}
 
 /*------=navigation menu ------*/
 
